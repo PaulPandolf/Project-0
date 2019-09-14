@@ -1,0 +1,121 @@
+/* Variables */
+
+$dark-gray: #292727;
+$light-gray: #f1f1f1;
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: $dark-gray;
+    font-family: arial;
+    background-color: $light-gray;
+    justify-content: center;
+    margin: 0px 0px;
+}
+
+.contain {
+    background-color: $dark-gray;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: lighter;
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Nesting */
+
+div {
+    table {
+        border-collapse: collapse;
+        border: 2px solid $dark-gray;
+        border-radius: 10px;
+        margin: auto;
+    }
+    
+    ul {
+        text-align: left;
+        padding-left: 46%;
+    }
+}
+
+/* Inheritance */
+
+%list-shared {
+    font-size: 15px;
+    font-family: arial;
+}
+
+.card-body-0 {
+    @extend %list-shared;
+    color: red;
+}
+
+.card-body-1 {
+    @extend %list-shared;
+    color: green;
+}
+
+.card-body-2 {
+    @extend %list-shared;
+    color: blue;
+}
+
+/* Media Queries */
+
+@media print {
+    div.contain {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    tr, td {
+        padding: 8px;
+        border: 1px solid $dark-gray;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 577px) {
+    td, tr {
+        padding: 10px 20px 10px 20px;
+        border: 1px solid $dark-gray;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $light-gray;
+    padding: 0px 15px 0px 15px;
+}
+
+#fall {
+    width: 60%;
+    justify-content: center;
+    align-content: center;
+}
+
+.column-0 {
+    font-weight: bold;
+}
+
+/* Drop Down */
